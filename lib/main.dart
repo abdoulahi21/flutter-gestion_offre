@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gestion_offre/pages/CV/MyResumePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,9 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      home: MyResumePage(),
       routes: {
 
       },
