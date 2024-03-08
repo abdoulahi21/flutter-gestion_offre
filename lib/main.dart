@@ -1,34 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-import 'pages/OffreDetailsPage.dart';
-
+import 'package:gestion_offre/pages/welcome.dart';
+import 'package:gestion_offre/pages/CV/MyResumePage.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
 
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(debugShowCheckedModeBanner: false,
-
-
-
-
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Welcome(),
       routes: {
-
 
       },
     );
   }
 }
-
-
