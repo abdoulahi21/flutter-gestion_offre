@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-
 class OffreDetailsPage extends StatefulWidget {
   @override
   _OffreDetailsPageState createState() => _OffreDetailsPageState();
