@@ -37,15 +37,12 @@ class SignUp extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-
                     ),),
                   SizedBox(height: 20,),
                   Text("Create an account, It's free ",
                     style: TextStyle(
                         fontSize: 15,
                         color:Colors.grey[700]),)
-
-
                 ],
               ),
               Column(
@@ -66,19 +63,16 @@ class SignUp extends StatelessWidget {
                       top: BorderSide(color: Colors.black),
                       left: BorderSide(color: Colors.black),
                       right: BorderSide(color: Colors.black),
-
                     )
-
                 ),
                 child: MaterialButton(
                   minWidth: double.infinity,
                   height: 60,
                   onPressed: () {},
-                  color: Color(0xff0095FF),
+                  color: Colors.indigo[900],
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
-
                   ),
                   child: Text(
                     "Sign up", style: TextStyle(
@@ -104,13 +98,9 @@ class SignUp extends StatelessWidget {
                   )
                 ],
               )
-
-
-
             ],
 
           ),
-
 
         ),
 
@@ -119,8 +109,6 @@ class SignUp extends StatelessWidget {
     );
   }
 }
-
-
 
 // we will be creating a widget for text field
 Widget inputFile({label, obscureText = false})

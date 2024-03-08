@@ -89,7 +89,7 @@ class Welcome extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
 
                     },
-                    color: Color(0xff0095FF),
+                    color: Colors.indigo[900],
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50)
                     ),
