@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_resume_template: ^1.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
