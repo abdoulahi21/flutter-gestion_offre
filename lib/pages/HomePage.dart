@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_offre/pages/CV/MyResumePage.dart';
 import 'package:gestion_offre/pages/DetailOffre.dart';
+import 'package:gestion_offre/pages/EditInformation.dart';
 import 'package:gestion_offre/pages/OffreDetailsPage.dart';
 
 
@@ -98,7 +99,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> MyResumePage()));
                 },
               ),
-              ListTile(
+              /*ListTile(
                 // j'ai modifier le titre par offres
                 title: Text('Offre ', style: TextStyle(color: Colors.white)),
                 onTap: () {
@@ -106,17 +107,18 @@ class HomePage extends StatelessWidget {
 
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>OffreDetailsPage()));
                 },
-              ),
+              ),*/
               ListTile(
                 title: Text('Favoris', style: TextStyle(color: Colors.white)),
                 onTap: () {
-                  // Action lorsque le deuxième élément du menu est cliqué
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>OffreDetailsPage()));
                 },
               ),
               ListTile(
                 title: Text('Modifier mes infos', style: TextStyle(color: Colors.white)),
                 onTap: () {
                   // Action lorsque le deuxième élément du menu est cliqué
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>EditInformationPage()));
                 },
               ),
             ],
