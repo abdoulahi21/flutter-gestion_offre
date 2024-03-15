@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gestion_offre/pages/CV/MyResumePage.dart';
 import 'package:gestion_offre/pages/DetailOffre.dart';
+import 'package:gestion_offre/pages/OffreDetailsPage.dart';
 
 
 // Modèle pour représenter une offre
@@ -41,12 +43,13 @@ class HomePage extends StatelessWidget {
     // Ajoutez autant d'offres que nécessaire
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text("Recherche Emploi", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.indigo[900],
+        title: Text("Job Disponibles", style: TextStyle(color: Colors.white)),
         iconTheme: IconThemeData(color: Colors.white),
         actions: [
           IconButton(
@@ -60,6 +63,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      backgroundColor: Colors.indigo[500],
       floatingActionButton: Container(
         margin: EdgeInsets.only(top: kToolbarHeight + 30),
         child: FloatingActionButton.extended(
@@ -71,32 +75,36 @@ class HomePage extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           icon: Icon(Icons.add, color: Colors.white,),
-          backgroundColor: Colors.orange,
+          backgroundColor: Colors.indigo[900],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
       drawer: Drawer(
         child: Container(
-          color: Colors.blue, // Changer la couleur de fond du menu latéral
+          color: Colors.indigo[900] ,// Changer la couleur de fond du menu latéral
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
                 child: Text('Menu', style: TextStyle(color: Colors.white)),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.indigo[900],
                 ),
               ),
               ListTile(
                 title: Text('Mon CV', style: TextStyle(color: Colors.white)),
                 onTap: () {
-                  // Action lorsque le premier élément du menu est cliqué
+                  // Action lorsque le premier élément du menu est cliqué(page cv)
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MyResumePage()));
                 },
               ),
               ListTile(
-                title: Text('Offre Postules', style: TextStyle(color: Colors.white)),
+                // j'ai modifier le titre par offres
+                title: Text('Offre ', style: TextStyle(color: Colors.white)),
                 onTap: () {
-                  // Action lorsque le deuxième élément du menu est cliqué
+                  // Action lorsque le deuxième élément du menu est cliqué(les offres)
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>OffreDetailsPage()));
                 },
               ),
               ListTile(
@@ -169,15 +177,15 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Plus de détails',
+                        'Voir détails',
                         style: TextStyle(
                           fontSize: 14.0,
-                          color: Colors.blue,
+                          color: Colors.indigo[900],
                         ),
                       ),
                       Icon(
                         Icons.arrow_forward,
-                        color: Colors.blue,
+                        color: Colors.indigo[900],
                       ),
                     ],
                   ),
