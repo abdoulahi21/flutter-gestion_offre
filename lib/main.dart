@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: Welcome(),
+       home: Welcome(),
      // home: OffreDetailsPage(),
       title : 'Recherche d\'emploi',
-     home: HomePage(),
+     //home: HomePage(),
       routes: {
 
       },
