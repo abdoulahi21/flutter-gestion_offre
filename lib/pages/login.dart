@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gestion_offre/pages/HomePage.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -74,7 +75,9 @@ class Login extends StatelessWidget {
                     child: MaterialButton(
                       minWidth: double.infinity,
                       height: 60,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                      },
                       color: Colors.indigo[900],
                       elevation: 0,
                       shape: RoundedRectangleBorder(
@@ -86,7 +89,6 @@ class Login extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
                         color: Colors.white,
-
                       ),
                       ),
 
